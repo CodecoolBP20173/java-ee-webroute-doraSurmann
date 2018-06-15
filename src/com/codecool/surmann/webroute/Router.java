@@ -15,12 +15,12 @@ public class Router {
                 "</h1></body>" +
                 "</html>";
     }
-    @WebRoute(path = "/other")
+    @WebRoute(path = "/other", method = WebRoute.HTTPMethod.POST)
     public static String Otherpage(HttpExchange exchange) {
 
         return "<!doctype html>" +
                 "<html lang=\"en\">" +
-                "<head><title>Main page</title></head>" +
+                "<head><title>Other page</title></head>" +
                 "<body><h2>some other page</h2></body>" +
                 "</html>";
     }
