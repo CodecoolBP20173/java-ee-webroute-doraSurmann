@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 
 
 public class Handler implements HttpHandler {
-    Method method;
+   Method method;
 
     @Override
     public void handle(HttpExchange exchange) throws IOException {
@@ -25,7 +25,6 @@ public class Handler implements HttpHandler {
         }
         try (OutputStream stream = exchange.getResponseBody()) {
             stream.write(response.getBytes());
-            stream.close();
         }
 
     }
